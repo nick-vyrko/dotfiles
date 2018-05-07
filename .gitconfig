@@ -1,0 +1,63 @@
+[user]
+  name = Nick Vyrko
+  email = nikita.vyrko@gmail.com
+  signingkey = 39D43E4309C4B20C
+
+[alias]
+  co        = checkout
+  lg        = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  lol       = log --pretty=oneline --abbrev-commit --graph --decorate
+  snapshot  = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+  rmbranch  = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
+[core]
+  excludesfile = ~/.gitignore
+  editor       = subl
+  autocrlf     = input
+  ignorecase   = true
+[help]
+  autocorrect = 1
+[apply]
+  whitespace = nowarn
+[push]
+  default = current
+[merge]
+  conflictstyle = diff3
+[branch]
+  autosetupmerge  = true
+  autosetuprebase = always
+  mergeoptions    = --no-ff
+[status]
+  relativePaths = true
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui     = auto
+[color "status"]
+  added     = green
+  changed   = red
+  untracked = yellow
+[color "diff"]
+  meta = blue bold reverse
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
+[difftool]
+  prompt = false
+[pull]
+  rebase = true
+[credential]
+  helper = osxkeychain
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[commit]
+  gpgsign = true
