@@ -11,7 +11,7 @@
   rmbranch  = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
 [core]
   excludesfile = ~/.gitignore
-  editor       = subl
+  editor       = subl -n -w
   autocrlf     = input
   ignorecase   = true
 [help]
