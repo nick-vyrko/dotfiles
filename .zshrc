@@ -38,7 +38,7 @@ alias gp="git push"
 alias gpo="git push origin"
 alias gcob="git checkout -b"
 alias gco="git checkout"
-alias gl="git log --graph --oneline"
+alias gl="git lg"
 alias gpuo="git pull origin"
 alias gf="git fetch"
 alias gback="git undo"
@@ -52,6 +52,9 @@ alias s='subl'
 
 alias tree='tree -C'
 alias t='bundle exec rspec'
+
+# Juno Aliases
+alias wp-start="./bin/webpack-dev-server --no-hot --no-inline"
 
 export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
