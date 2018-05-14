@@ -6,6 +6,8 @@ prompt pure
 
 zstyle ':completion:*' menu select
 
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Colorize terminal
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
@@ -52,6 +54,7 @@ alias s='subl'
 
 alias tree='tree -C'
 alias t='bundle exec rspec'
+alias j='jobs'
 
 # Juno Aliases
 alias wp-start="./bin/webpack-dev-server --no-hot --no-inline"
@@ -112,3 +115,6 @@ export GIT_TOKEN=5d5679729b4da701e6c30bbdf2cb0d6dcb3e48f4
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export GPG_TTY=$(tty)
+
+
+# (sudo sysctl -w net.inet.ip.ttl=65) #increase ttl + 1
