@@ -1,7 +1,7 @@
 [user]
   name = Nick Vyrko
   email = nikita.vyrko@gmail.com
-  signingkey = 39D43E4309C4B20C
+  signingKey = DA66D6118C5669D5
 
 [alias]
   co        = checkout
@@ -11,7 +11,8 @@
   rmbranch  = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
 [core]
   excludesfile = ~/.gitignore
-  editor       = subl -n -w
+#  editor       = subl -n -w
+  editor       = vim
   autocrlf     = input
   ignorecase   = true
 [help]

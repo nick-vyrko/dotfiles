@@ -83,7 +83,7 @@ export WORDCHARS='*?[]~&;!$%^<>'
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/opt/local/bin:$HOME/.bin"
 
 export LANG=en_US.UTF-8
-export EDITOR='subl'
+export EDITOR='vim'
 
 eval "$(rbenv init -)"
 
@@ -101,6 +101,7 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 mkcd() { mkdir -p "$@" && cd "$_"; }
+killjobs() { jobs -p | awk '{split($0,a," "); print a[3]}' | xargs kill }
 
 # NVM, RVM exports
 export NVM_DIR=$HOME/.nvm
@@ -111,7 +112,7 @@ export LANG=en_US.UTF-8
 export PGHOST=localhost
 
 # GITHUB
-export GIT_TOKEN=5d5679729b4da701e6c30bbdf2cb0d6dcb3e48f4
+export GIT_TOKEN=ebe1ae40ccf9ab6f05b5b8daa1d219cfcb3e7fa1
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export GPG_TTY=$(tty)
