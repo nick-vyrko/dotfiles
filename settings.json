@@ -1,24 +1,29 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.colorTheme": "One Dark Pro",
-    "editor.tabSize": 2,
-    "editor.renderControlCharacters": true,
-    "editor.rulers": [120],
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.autoSave": "onFocusChange",
-    "files.exclude": {
-        ".idea": true
-    },
-    "search.exclude": {
-        "**/.git": true,
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/tmp": true,
-        "**/coverage": true,
-        "**/log": true,
-        "**/public/uploads": true
-      }
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Material Theme High Contrast",
+  "editor.tabSize": 2,
+  "editor.renderControlCharacters": true,
+  "editor.rulers": [120],
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 12,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+      ".idea": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "**/coverage": true,
+    "**/log": true,
+    "**/public/uploads": true
+  },
+  "ruby.intellisense": false,
+  "ruby.codeCompletion": false,
+  "workbench.statusBar.feedback.visible": false,
 }
