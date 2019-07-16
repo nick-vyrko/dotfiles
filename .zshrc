@@ -85,7 +85,7 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/loca
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Functions
 fancy-ctrl-z () {
@@ -107,12 +107,15 @@ killjobs() { jobs -p | awk '{split($0,a," "); print a[3]}' | xargs kill }
 export NVM_DIR=$HOME/.nvm
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PGHOST=localhost
 
 # GITHUB
-export GIT_TOKEN=ebe1ae40ccf9ab6f05b5b8daa1d219cfcb3e7fa1
+export GIT_TOKEN=f86830a1d793be604831ad0589829ce175f73e34
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export GPG_TTY=$(tty)
