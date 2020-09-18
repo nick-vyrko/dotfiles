@@ -49,7 +49,7 @@ alias reload!='exec "$SHELL" -l'
 alias zshconf="subl ~/.zshrc"
 
 alias cdws="cd $HOME/workspaces"
-alias cdcp="cd $HOME/workspaces/deployqa"
+alias cdcp="cd $HOME/workspaces/api"
 alias c="clear"
 
 alias l='ls -G'
@@ -79,7 +79,7 @@ alias grs="git reset --soft"
 alias gsth="git stash"
 
 alias b='bundle'
-alias be='bundle exec'
+alias be='spring stop; bundle exec'
 alias bi="bundle install"
 # alias s='subl'
 
@@ -123,5 +123,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export GPG_TTY=$(tty)
 
+export CURRENT_PLATFORM=niac
 
 # (sudo sysctl -w net.inet.ip.ttl=65) #increase ttl + 1
