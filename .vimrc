@@ -1,0 +1,3 @@
+syntax on
+color ron
+
