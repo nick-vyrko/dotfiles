@@ -121,6 +121,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export GPG_TTY=$(tty)
 export CURRENT_PLATFORM=smart
-export GITHUB_API_TOKEN=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
+# export GITHUB_API_TOKEN=<token>
 
- # (sudo sysctl -w net.inet.ip.ttl=65) #increase ttl + 1
+# (sudo sysctl -w net.inet.ip.ttl=65) #increase ttl + 1
