@@ -1,19 +1,13 @@
-fpath=( "$HOME/.zfunctions" $fpath )
-
 # ======== ZSH SETTINGS ======== # 
-
-autoload -U compinit; compinit
-autoload -U promptinit; promptinit
-prompt pure
 
 zstyle ':completion:*' menu select # select completions with arrow keys
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 
 
 # By default, zsh considers many characters part of a word (e.g., _ and -).
 # Narrow that down to allow easier skipping through words via M-f and M-b.
-export WORDCHARS='*?[]~&;!$%^<>'
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:/opt/local/bin:$HOME/Library/Python/3.8/bin:$HOME/.bin"
+# export WORDCHARS='*?[]~&;!$%^<>'
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:$HOME/.bin"
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
@@ -81,7 +75,6 @@ alias gsth="git stash"
 alias b='bundle'
 alias be='bundle exec'
 alias bi="bundle install"
-# alias s='subl'
 
 alias tree='tree -C'
 alias t='CURRENT_PLATFORM=smart bundle exec rspec'
@@ -94,33 +87,26 @@ alias j='jobs'
 
 bindkey '^ ' autosuggest-accept # zsh-authosuggestions accept suggested
 
-# backward and forward word with option+left/right
-bindkey '^[^[[D' backward-word
-bindkey '^[b' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[f' forward-word
-
-# delete word with ctrl+backspace
-bindkey '^[[3;5~' backward-delete-word
 
 # ======== ENVIRONMENTS ======== # 
 
 # NVM
 export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
-
-# # =======
-# export LC_ALL=en_US.UTF-8
-# export LANG=en_US.UTF-8
-# export PGHOST=localhost
-
-# export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-export GPG_TTY=$(tty)
+export GPG_TTY=$(tty) # gpg comits signing
 export CURRENT_PLATFORM=smart
 # export GITHUB_API_TOKEN=<token>
 
 # (sudo sysctl -w net.inet.ip.ttl=65) #increase ttl + 1
+
+
+# ========== Starship setup ======== #
+
+export STARSHIP_CONFIG=~/.starship/config.toml
+eval "$(starship init zsh)"
+
+eval "$(fnm env --use-on-cd)" # fast node versions manager
