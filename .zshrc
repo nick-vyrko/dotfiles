@@ -1,8 +1,8 @@
-# ======== ZSH SETTINGS ======== # 
+# ======== ZSH SETTINGS ======== #
 
 zstyle ':completion:*' menu select # select completions with arrow keys
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # By default, zsh considers many characters part of a word (e.g., _ and -).
 # Narrow that down to allow easier skipping through words via M-f and M-b.
@@ -37,7 +37,7 @@ setopt correct # autocorrect commands
 mkcd() { mkdir -p "$@" && cd "$_"; }
 
 
-# ======== ALIASES ======== # 
+# ======== ALIASES ======== #
 alias reload!='exec "$SHELL" -l'
 
 alias zshconf="vim ~/.zshrc"
@@ -48,13 +48,13 @@ alias c="clear"
 
 
 alias l='ls -lG'
-alias ll='ls -laFG'
+alias ll='ls -lahFG'
 
 # git related shortcuts
 alias ga="git add"
 alias gaa="git add -A"
-alias gc="git commit"
-alias gcm="git commit -m"
+alias gc="git commit -S"
+alias gcm="git commit -S -m"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gbdo="git push origin --delete"
@@ -83,16 +83,19 @@ alias copdiff='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs 
 alias j='jobs'
 
 
-# ======== KEY BINDINGS ======== # 
+# ======== KEY BINDINGS ======== #
 
 bindkey '^ ' autosuggest-accept # zsh-authosuggestions accept suggested
 
 
-# ======== ENVIRONMENTS ======== # 
+# ======== ENVIRONMENTS ======== #
 
 # NVM
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+# export NVM_DIR=$HOME/.nvm
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+
+# FNM node version manager
+eval "$(fnm env --use-on-cd)"
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -108,5 +111,3 @@ export CURRENT_PLATFORM=smart
 
 export STARSHIP_CONFIG=~/.starship/config.toml
 eval "$(starship init zsh)"
-
-eval "$(fnm env --use-on-cd)" # fast node versions manager
