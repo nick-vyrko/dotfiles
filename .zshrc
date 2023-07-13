@@ -2,7 +2,7 @@
 
 zstyle ':completion:*' menu select # select completions with arrow keys
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # By default, zsh considers many characters part of a word (e.g., _ and -).
 # Narrow that down to allow easier skipping through words via M-f and M-b.
@@ -66,7 +66,7 @@ alias gcob="git checkout -b"
 alias gco="git checkout"
 alias gl="git lg"
 alias gpuo="git pull origin"
-alias gf="git fetch"
+alias gf="git fetch --prune --quiet"
 alias gfp="git fetch --prune; git prune"
 alias gback="git undo"
 alias grs="git reset --soft"
@@ -87,12 +87,12 @@ alias j='jobs'
 
 bindkey '^ ' autosuggest-accept # zsh-authosuggestions accept suggested
 
-
 # ======== ENVIRONMENTS ======== #
 
 # NVM
 # export NVM_DIR=$HOME/.nvm
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # FNM node version manager
 eval "$(fnm env --use-on-cd)"
@@ -100,9 +100,10 @@ eval "$(fnm env --use-on-cd)"
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export GPG_TTY=$(tty) # gpg comits signing
-export CURRENT_PLATFORM=smart
-# export GITHUB_API_TOKEN=<token>
+
+# # =======
+export GPG_TTY=$(tty)
+# export GITHUB_API_TOKEN=
 
 # (sudo sysctl -w net.inet.ip.ttl=65) #increase ttl + 1
 
@@ -111,3 +112,9 @@ export CURRENT_PLATFORM=smart
 
 export STARSHIP_CONFIG=~/.starship/config.toml
 eval "$(starship init zsh)"
+
+# export AWS_ACCESS_KEY=
+# export AWS_SECRET_ACCESS_KEY=
+# export AWS_USER=
+# export AWS_MFA_ARN=
+

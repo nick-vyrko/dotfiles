@@ -6,7 +6,7 @@
     "Blue Component" : 0.93115901947021484,
     "Red Component" : 0.90730977058410645
   },
-  "Rows" : 45,
+  "Rows" : 55,
   "Ansi 11 Color" : {
     "Green Component" : 0.88262283802032471,
     "Blue Component" : 0.42511638998985291,
@@ -55,6 +55,7 @@
         "configuration" : {
           "knobs" : {
             "path" : "path",
+            "minwidth" : 0,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
@@ -62,9 +63,8 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "base: compression resistance" : 1,
             "base: priority" : 5,
-            "minwidth" : 0,
+            "base: compression resistance" : 1,
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
@@ -495,8 +495,8 @@
     "Red Component" : 0.26286587119102478
   },
   "Left Option Key Changeable" : false,
-  "Normal Font" : "JetBrainsMonoNerdFontCompleteM-Regular 14",
-  "Vertical Spacing" : 1,
+  "Normal Font" : "JetBrainsMono-Regular 14",
+  "Vertical Spacing" : 1.0600000000000001,
   "Blur" : false,
   "Ansi 7 Color" : {
     "Green Component" : 0.99997437000274658,
