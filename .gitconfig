@@ -1,7 +1,7 @@
 [user]
   name = Nick Vyrko
   email = nikita.vyrko@gmail.com
-  signingKey = DA66D6118C5669D5
+  signingKey = EA2505A479AD1E58
 
 [alias]
   co        = checkout
@@ -62,3 +62,5 @@
   smudge = git-media-smudge %f
 [commit]
   gpgsign = true
+[maintenance]
+  repo = /Users/nickvyrko/workspaces/backend

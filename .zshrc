@@ -2,12 +2,13 @@
 
 zstyle ':completion:*' menu select # select completions with arrow keys
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # By default, zsh considers many characters part of a word (e.g., _ and -).
 # Narrow that down to allow easier skipping through words via M-f and M-b.
 # export WORDCHARS='*?[]~&;!$%^<>'
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:$HOME/.bin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/opt/homebrew/opt/libpq/bin:$HOME/.bin"
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
@@ -35,7 +36,21 @@ setopt correct # autocorrect commands
 # ======== FUNCTIONS ======== #
 
 mkcd() { mkdir -p "$@" && cd "$_"; }
+ft() {
+  local command
 
+  if alias "$1" &>/dev/null; then
+    # Expand the alias
+    command=$(alias "$1" | cut -d"'" -f2)
+    shift # Remove the alias name from arguments
+  else
+    # Use the first argument as the command
+    command=$1
+    shift
+  fi
+  # Run the command with the remaining arguments and environment variable
+  eval "APP_ENTITY=funding_ticks $command $@"
+}
 
 # ======== ALIASES ======== #
 alias reload!='exec "$SHELL" -l'
@@ -43,7 +58,7 @@ alias reload!='exec "$SHELL" -l'
 alias zshconf="vim ~/.zshrc"
 
 alias cdws="cd $HOME/workspaces"
-alias cdcp="cd $HOME/workspaces/api"
+alias cdcp="cd $HOME/workspaces/backend"
 alias c="clear"
 
 
@@ -76,8 +91,12 @@ alias b='bundle'
 alias be='bundle exec'
 alias bi="bundle install"
 
+alias rs="bundle exec rails s"
+alias rc="bundle exec rails c"
+
 alias tree='tree -C'
-alias t='CURRENT_PLATFORM=smart bundle exec rspec'
+alias t='APP_ENTITY=funding_pips bundle exec rspec'
+alias tt='APP_ENTITY=funding_ticks bundle exec rspec'
 alias cop='bundle exec rubocop'
 alias copdiff='git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop'
 alias j='jobs'
@@ -93,6 +112,11 @@ bindkey '^ ' autosuggest-accept # zsh-authosuggestions accept suggested
 # export NVM_DIR=$HOME/.nvm
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# export APP_ENTITY=funding_pips
+
+# Homebrew
+export PATH=/opt/homebrew/bin:$PATH 
 
 # FNM node version manager
 eval "$(fnm env --use-on-cd)"
