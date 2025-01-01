@@ -1,6 +1,6 @@
 {
   "Working Directory" : "\/Users\/mikita_vyrko\/workspaces\/api",
-  "Prompt Before Closing 2" : false,
+  "Prompt Before Closing 2" : 2,
   "Selected Text Color" : {
     "Green Component" : 0.92142927646636963,
     "Blue Component" : 0.93115901947021484,
@@ -13,7 +13,7 @@
     "Red Component" : 0.99765938520431519
   },
   "Use Italic Font" : true,
-  "HotKey Characters" : "§",
+  "HotKey Characters" : "`",
   "Foreground Color" : {
     "Green Component" : 0.92142927646636963,
     "Blue Component" : 0.93115901947021484,
@@ -100,10 +100,11 @@
         "class" : "iTermStatusBarClockComponent",
         "configuration" : {
           "knobs" : {
-            "format" : "HH:mm dd\/M",
             "base: priority" : 5,
             "maxwidth" : 1.7976931348623157e+308,
+            "format" : "HH:mm dd\/M",
             "minwidth" : "0",
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
@@ -111,7 +112,6 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "base: compression resistance" : 1,
             "localize" : 0
           },
           "layout advanced configuration dictionary value" : {
@@ -133,6 +133,7 @@
   "Hide After Opening" : false,
   "Prevent Opening in a Tab" : false,
   "Flashing Bell" : false,
+  "Enable Triggers in Interactive Apps" : false,
   "Cursor Guide Color" : {
     "Red Component" : 0.70213186740875244,
     "Color Space" : "sRGB",
@@ -164,7 +165,7 @@
   "Unlimited Scrollback" : false,
   "Allow modifyOtherKeys" : false,
   "Custom Command" : "No",
-  "HotKey Key Code" : 10,
+  "HotKey Key Code" : 50,
   "Keyboard Map" : {
     "0xf728-0x80000" : {
       "Text" : "d",
@@ -444,7 +445,7 @@
     "Blue Component" : 0.99898606538772583,
     "Red Component" : 0.43880558013916016
   },
-  "Window Type" : 2,
+  "Window Type" : 9,
   "Use Bright Bold" : true,
   "Has Hotkey" : true,
   "HotKey Modifier Activation" : 0,
@@ -488,12 +489,12 @@
   },
   "Ambiguous Double Width" : false,
   "Background Image Mode" : 0,
-  "Cursor Type" : 1,
   "Ansi 0 Color" : {
     "Green Component" : 0.35616019368171692,
     "Blue Component" : 0.40253299474716187,
     "Red Component" : 0.26286587119102478
   },
+  "Cursor Type" : 1,
   "Left Option Key Changeable" : false,
   "Normal Font" : "JetBrainsMono-Regular 14",
   "Vertical Spacing" : 1.0600000000000001,
@@ -509,6 +510,7 @@
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 1,
+  "Only The Default BG Color Uses Transparency" : true,
   "HotKey Window Animates" : false,
   "HotKey Modifier Flags" : 1048576,
   "Ansi 15 Color" : {
@@ -522,7 +524,7 @@
     "Blue Component" : 0.82062870264053345,
     "Red Component" : 0.34860008955001831
   },
-  "Transparency" : 0.02634041878172589,
+  "Transparency" : 0,
   "HotKey Activated By Modifier" : false,
   "Background Color" : {
     "Green Component" : 0.14745020866394043,
@@ -532,7 +534,7 @@
   "Initial Text" : "",
   "Screen" : -2,
   "Initial Use Transparency" : true,
-  "HotKey Characters Ignoring Modifiers" : "§",
+  "HotKey Characters Ignoring Modifiers" : "`",
   "Bound Hosts" : [
 
   ],
@@ -542,10 +544,11 @@
     "Blue Component" : 0.60766077041625977,
     "Red Component" : 0.9887651801109314
   },
-  "Columns" : 150,
+  "Columns" : 200,
   "HotKey Alternate Shortcuts" : [
 
   ],
+  "Show Timestamps" : 2,
   "Visual Bell" : true,
   "Custom Directory" : "No",
   "Ansi 5 Color" : {
